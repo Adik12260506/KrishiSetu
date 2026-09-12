@@ -7,8 +7,25 @@ const { MongoClient } = require('mongodb');
 const fs = require('fs');
 const path = require('path');
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017';
-const DB_NAME = process.env.DB_NAME || 'krishisetu_db';
+// Auto load .env file
+function loadEnv() {
+  const envPath = path.join(__dirname, '..', '.env');
+  if (fs.existsSync(envPath)) {
+    const content = fs.readFileSync(envPath, 'utf8');
+    content.split(/\r?\n/).forEach(line => {
+      const match = line.match(/^\s*([\w.-]+)\s*=\s*(.*)?\s*$/);
+      if (match) {
+        const key = match[1];
+        let val = (match[2] || '').replace(/(^['"]|['"]$)/g, '').trim();
+        process.env[key] = val;
+      }
+    });
+  }
+}
+loadEnv();
+
+const getMongoUri = () => process.env.MONGODB_URI || 'mongodb://localhost:27017';
+const getDbName = () => process.env.DB_NAME || 'krishisetu_db';
 const LOCAL_STORAGE_FILE = path.join(__dirname, '..', 'local_mongodb_data.json');
 
 class LocalMongoCollection {
@@ -138,18 +155,20 @@ class DatabaseManager {
   }
 
   async connect() {
+    const uri = getMongoUri();
+    const dbName = getDbName();
     try {
-      this.client = new MongoClient(MONGODB_URI, { serverSelectionTimeoutMS: 1500 });
+      this.client = new MongoClient(uri, { serverSelectionTimeoutMS: 6000 });
       await this.client.connect();
-      this.db = this.client.db(DB_NAME);
+      this.db = this.client.db(dbName);
       this.isMongoConnected = true;
       this.mode = 'MONGODB_LIVE';
-      console.log(`[KrishiSetu DB] Connected to MongoDB database: "${DB_NAME}" at ${MONGODB_URI}`);
+      console.log(`[KrishiSetu DB] Connected successfully to MongoDB: "${dbName}"`);
       await this._initMongoIndexes();
     } catch (err) {
       this.isMongoConnected = false;
       this.mode = 'MONGODB_PERSISTENT_ADAPTER';
-      console.log(`[KrishiSetu DB] MongoDB server not active at ${MONGODB_URI}. Active mode: MongoDB-Compatible Persistent Document Store with Unique Indexes.`);
+      console.log(`[KrishiSetu DB] Could not connect to live MongoDB (${err.message}). Active mode: Resilient Persistent Local Adapter.`);
     }
   }
 
@@ -180,8 +199,8 @@ class DatabaseManager {
     return {
       connected: this.isMongoConnected,
       mode: this.mode,
-      database: DB_NAME,
-      uri: MONGODB_URI,
+      database: getDbName(),
+      uri: getMongoUri(),
       collections_indexed: Object.keys(this.uniqueKeyMap)
     };
   }

@@ -280,7 +280,6 @@ function setupRoutes(app) {
                   const parsed = JSON.parse(d);
                   if (gRes.statusCode === 200 && parsed.sub) resolve(parsed);
                   else {
-                    // Fallback to decode JWT
                     const parts = credential.split('.');
                     if (parts.length >= 2) resolve(JSON.parse(Buffer.from(parts[1], 'base64').toString('utf8')));
                     else reject(new Error(parsed.error_description || 'Invalid token'));
@@ -296,6 +295,36 @@ function setupRoutes(app) {
               if (parts.length >= 2) resolve(JSON.parse(Buffer.from(parts[1], 'base64').toString('utf8')));
               else reject(new Error('Network error verifying Google token'));
             });
+          });
+        } catch (e) {}
+      }
+
+      if (!googleProfile && access_token) {
+        // 2. Verify with Google OAuth userinfo endpoint using access_token
+        try {
+          googleProfile = await new Promise((resolve, reject) => {
+            const https = require('https');
+            const opts = {
+              hostname: 'www.googleapis.com',
+              path: '/oauth2/v3/userinfo',
+              method: 'GET',
+              headers: { 'Authorization': `Bearer ${access_token}` }
+            };
+            const gReq = https.request(opts, (gRes) => {
+              let d = '';
+              gRes.on('data', chunk => d += chunk);
+              gRes.on('end', () => {
+                try {
+                  const parsed = JSON.parse(d);
+                  if (gRes.statusCode === 200 && (parsed.sub || parsed.email)) resolve(parsed);
+                  else reject(new Error(parsed.error_description || 'Failed to fetch userinfo'));
+                } catch (err) {
+                  reject(err);
+                }
+              });
+            });
+            gReq.on('error', reject);
+            gReq.end();
           });
         } catch (e) {}
       }

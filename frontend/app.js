@@ -3,6 +3,28 @@
  * FS-2604: Offline-First Parametric Micro-Insurance
  */
 
+// Immediate OAuth redirect popup check & auto-close
+(function checkOAuthPopup() {
+  try {
+    const hash = window.location.hash;
+    if (hash && (hash.includes('access_token=') || hash.includes('id_token=') || hash.includes('iss='))) {
+      const cleanHash = hash.startsWith('#') ? hash.substring(1) : hash;
+      const params = new URLSearchParams(cleanHash);
+      const idToken = params.get('id_token');
+      const accessToken = params.get('access_token');
+      
+      if (window.opener && !window.opener.closed) {
+        window.opener.postMessage({
+          type: 'GOOGLE_OAUTH_TOKEN',
+          id_token: idToken,
+          access_token: accessToken
+        }, '*');
+        window.close();
+      }
+    }
+  } catch (e) {}
+})();
+
 // State Variables
 let currentView = 'landing'; // 'landing' | 'auth' | 'farmer' | 'admin'
 let currentFarmerScreen = 'home';
@@ -88,6 +110,30 @@ const VOICE_SCRIPTS = {
 // 1. INITIALIZATION & LIFECYCLE
 // =========================================================================
 window.addEventListener('DOMContentLoaded', () => {
+  // Check for OAuth tokens in URL hash (from Google OAuth redirect/popup)
+  if (window.location.hash && window.location.hash.includes('id_token=')) {
+    const hashParams = new URLSearchParams(window.location.hash.substring(1));
+    const idToken = hashParams.get('id_token');
+    const accessToken = hashParams.get('access_token');
+    if (idToken) {
+      if (window.opener && !window.opener.closed) {
+        window.opener.postMessage({ type: 'GOOGLE_OAUTH_TOKEN', id_token: idToken, access_token: accessToken }, window.location.origin);
+        window.close();
+        return;
+      } else {
+        window.history.replaceState(null, '', window.location.pathname);
+        handleGoogleCredentialResponse({ credential: idToken });
+      }
+    }
+  }
+
+  // Listen for tokens from OAuth popup
+  window.addEventListener('message', (event) => {
+    if (event.origin === window.location.origin && event.data && event.data.type === 'GOOGLE_OAUTH_TOKEN') {
+      handleGoogleCredentialResponse({ credential: event.data.id_token });
+    }
+  });
+
   // Check for existing session in localStorage
   const savedSession = localStorage.getItem('krishisetu_session');
   if (savedSession) {
@@ -923,29 +969,47 @@ async function initGoogleIdentity() {
     const config = await res.json();
     window.GOOGLE_CLIENT_ID = config.google_client_id || '';
 
-    if (window.google && window.google.accounts && window.GOOGLE_CLIENT_ID) {
+    if (window.GOOGLE_CLIENT_ID && window.google && window.google.accounts) {
       google.accounts.id.initialize({
         client_id: window.GOOGLE_CLIENT_ID,
         callback: handleGoogleCredentialResponse,
         auto_select: false,
         cancel_on_tap_outside: true
       });
+
+      // Render official Google button
+      const btnContainer = document.getElementById('g_id_signin_container');
+      if (btnContainer) {
+        google.accounts.id.renderButton(btnContainer, {
+          theme: 'filled_black',
+          size: 'large',
+          type: 'standard',
+          shape: 'rectangular',
+          text: 'continue_with',
+          logo_alignment: 'left',
+          width: 320
+        });
+        const fallbackBtn = document.getElementById('btn-google-fallback');
+        if (fallbackBtn) fallbackBtn.style.display = 'none';
+      }
+
       googleAuthInitialized = true;
     }
   } catch (e) {}
 }
 
 async function handleGoogleCredentialResponse(response) {
-  if (!response || !response.credential) return;
+  if (!response || (!response.credential && !response.access_token)) return;
 
   try {
+    const payload = { device_id: 'DEV_WEB_CLIENT' };
+    if (response.credential) payload.credential = response.credential;
+    if (response.access_token) payload.access_token = response.access_token;
+
     const res = await fetch('/api/auth/google', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        credential: response.credential,
-        device_id: 'DEV_WEB_CLIENT'
-      })
+      body: JSON.stringify(payload)
     });
 
     const data = await res.json();
@@ -984,17 +1048,30 @@ function logoutUser() {
 }
 
 async function triggerGoogleSignIn() {
-  if (window.google && window.google.accounts && window.GOOGLE_CLIENT_ID) {
-    google.accounts.id.prompt((notification) => {
-      if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
-        launchGoogleOAuthPopup(window.GOOGLE_CLIENT_ID);
+  if (window.google && window.google.accounts && window.google.accounts.oauth2 && window.GOOGLE_CLIENT_ID) {
+    const tokenClient = google.accounts.oauth2.initTokenClient({
+      client_id: window.GOOGLE_CLIENT_ID,
+      scope: 'openid profile email',
+      callback: (tokenResponse) => {
+        if (tokenResponse && tokenResponse.access_token) {
+          handleGoogleCredentialResponse({ access_token: tokenResponse.access_token });
+        }
+      },
+      error_callback: (err) => {
+        console.warn('[Google OAuth Error]', err);
       }
     });
+    tokenClient.requestAccessToken();
+    return;
+  }
+
+  if (window.google && window.google.accounts && window.GOOGLE_CLIENT_ID) {
+    google.accounts.id.prompt();
     return;
   }
 
   const userChoice = prompt(
-    "Google OAuth 2.0 Sign In:\n• Enter your Google email address (or your Google Cloud Client ID):\n\n(Tip: In production, configure GOOGLE_CLIENT_ID in .env for official Google One-Tap prompt)",
+    "Google OAuth 2.0 Sign In:\n• Enter your Google email address (or your Google Cloud Client ID):",
     window.GOOGLE_CLIENT_ID || "farmer.user@gmail.com"
   );
 
@@ -1004,7 +1081,6 @@ async function triggerGoogleSignIn() {
   if (cleanInput.includes('.googleusercontent.com')) {
     window.GOOGLE_CLIENT_ID = cleanInput;
     initGoogleIdentity();
-    launchGoogleOAuthPopup(cleanInput);
     return;
   }
 
@@ -1037,12 +1113,6 @@ async function triggerGoogleSignIn() {
   } catch (err) {
     alert(`Google Sign-In failed: ${err.message}`);
   }
-}
-
-function launchGoogleOAuthPopup(clientId) {
-  const redirectUri = window.location.origin;
-  const oauthUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${encodeURIComponent(clientId)}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=id_token%20token&scope=openid%20profile%20email&nonce=ks_${Date.now()}`;
-  window.open(oauthUrl, 'google_oauth_popup', 'width=520,height=620,menubar=no,status=no');
 }
 
 async function handleEmailPasswordAuth(e) {
