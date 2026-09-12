@@ -65,4 +65,11 @@ This ledger documents the AI models and tools utilized during the development of
 - **Asked:** Implement Bearer session token authentication, Role-Based Access Control (`FARMER`, `ADMIN`, `JUROR`), unique database constraints for idempotent payouts and sync events, wallet ledger balance reduction verification, rate limiting, and automated security benchmark suite.
 - **Changed / Reviewed:** Replaced server-side singleton state with stateless Bearer tokens persisted to MongoDB; added unique indexes preventing duplicate credits; implemented deterministic event reduction validation; verified zero cross-user leakage across shared device handovers.
 
+---
+
+### 10. Multi-Lingual Odia Expansion & Voice Query Assistant (`core/voice/`, `frontend/app.js`, `frontend/index.html`)
+- **Model/Tool Used:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Asked:** Expand regional Indian language support to include Odia (`or-IN`) across voice prompts, comprehension quizzes, and build an interactive voice and text Query Assistant on the farmer portal.
+- **Changed / Reviewed:** Added full Odia translations, comprehension question bank with Odia keywords (`ho`, `han`, `hote`, `bhul`), Web Speech API recognition and synthesis for `or-IN`, quick query suggestion chips, and an audio-enabled answer playback card.
+
 

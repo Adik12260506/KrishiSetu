@@ -72,10 +72,30 @@ const I18N = {
     why_paid_title: 'కరువు రక్షణ పరిహారం అందింది',
     why_paid_body: '18.5 మి.మీ వర్షపాతం నమోదైంది (35 మి.మీ పరిమితి కంటే తక్కువ). ఆటోమేటిక్ చెల్లింపు మీ వాలెట్‌కు చేరింది.'
   },
+  or: {
+    user_label: 'କୃଷକ ଉପଭୋକ୍ତା',
+    voice_cue: 'ପ୍ରଶ୍ନ ପଚାରନ୍ତୁ / ଯୋଜନା ଶୁଣନ୍ତୁ',
+    voice_sub: 'ଓଡ଼ିଆରେ ଫସଲ ସୁରକ୍ଷା ନିୟମ ଶୁଣିବା କିମ୍ବା ପ୍ରଶ୍ନ ପଚାରିବାକୁ ଟ୍ୟାପ୍ କରନ୍ତୁ',
+    tile_policy: 'ମୋର ସୁରକ୍ଷା',
+    tile_wallet: 'ମୋର ୱାଲେଟ୍',
+    tile_payout: 'ମୋର ପରିଶୋଧ',
+    tile_sync: 'ୱାୟାର ସିଙ୍କ',
+    hero_title: 'ମୋର ଫସଲ ସୁରକ୍ଷା',
+    safe_phone: 'ଏହି ଫୋନରେ ସୁରକ୍ଷିତ',
+    quiz_question: 'ଯଦି ୧୪ ଦିନରେ ବର୍ଷା ୨୦ ମିଲିମିଟର ହୁଏ (୩୫ ମିମି ସୀମାରୁ କମ), ତେବେ ଆପଣଙ୍କୁ ସ୍ୱତଃ ବୀମା ପରିଶୋଧ ମିଳିବ କି?',
+    quiz_pass: 'ଅଭିନନ୍ଦନ! ଆପଣଙ୍କ ବୁଝାମଣା ନିଶ୍ଚିତ ହୋଇଛି। ଆପଙ୍କ ସୁରକ୍ଷା ସକ୍ରିୟ ହୋଇଛି।',
+    quiz_retry: 'ଦୟାକରି ପୁଣି ଶୁଣନ୍ତୁ। ମରୁଡ଼ି ନିୟମ ବୁଝିବାକୁ ପୁନଃ ଚେଷ୍ଟା କରନ୍ତୁ।',
+    spend_success: 'ଅଫଲାଇନ୍ ପେମେଣ୍ଟ ସଫଳ! ନୂତନ ବାଲାନ୍ସ:',
+    why_paid_title: 'ମରୁଡ଼ି ସୁରକ୍ଷା ପରିଶୋଧ ମଞ୍ଜୁର ହୋଇଛି',
+    why_paid_body: '୧୮.୫ ମିଲିମିଟର ବର୍ଷା ରେକର୍ଡ ହୋଇଛି (୩୫ ମିମି ସୀମାରୁ କମ)। ସ୍ୱତଃ ଦାବି ଆପଣଙ୍କ ୱାଲେଟରେ ଜମା ହୋଇଛି।',
+    query_title: 'ବୀମା ସମ୍ବନ୍ଧୀୟ ପ୍ରଶ୍ନ ପଚାରନ୍ତୁ (Ask Insurance Queries)',
+    query_ask_btn: 'ପଚାରନ୍ତୁ',
+    query_placeholder: 'ପ୍ରଶ୍ନ ପଚାରନ୍ତୁ କିମ୍ବା ଟାଇପ କରନ୍ତୁ (ଯଥା: କେତେ ଟଙ୍କା ମିଳିବ?)...'
+  },
   en: {
     user_label: 'Farmer Account',
     voice_cue: 'Speak or Listen to Policy',
-    voice_sub: 'Tap to hear crop protection terms in your language',
+    voice_sub: 'Tap to hear crop protection terms or ask questions in your language',
     tile_policy: 'My Protection',
     tile_wallet: 'My Wallet',
     tile_payout: 'My Payout',
@@ -87,7 +107,10 @@ const I18N = {
     quiz_retry: "Let's hear that again. Please review the drought coverage rule.",
     spend_success: 'Offline payment successful! New balance:',
     why_paid_title: 'Drought Protection Payout Received',
-    why_paid_body: 'Rainfall recorded at 18.5 mm (below 35 mm threshold). Automatic credit added to your local wallet.'
+    why_paid_body: 'Rainfall recorded at 18.5 mm (below 35 mm threshold). Automatic credit added to your local wallet.',
+    query_title: 'Ask Insurance Questions / Voice Assistant',
+    query_ask_btn: 'Ask',
+    query_placeholder: 'Ask question or type (e.g. How much payout will I get?)...'
   }
 };
 
@@ -99,6 +122,10 @@ const VOICE_SCRIPTS = {
   te: {
     welcome: 'నమస్కారం రైతు సోదరా! ఖరీఫ్ వేరుశనగ కరువు రక్షణ పథకానికి స్వాగతం.',
     terms: 'ప్రీమియం ₹120 మాత్రమే. 14 రోజుల్లో వర్షం 35 మి.మీ కంటే తగ్గితే ₹5,000 వరకు పరిహారం అందుతుంది.'
+  },
+  or: {
+    welcome: 'ନମସ୍କାର କୃଷକ ଭାଇ! ଖରିଫ ଚିନାବାଦାମ ମରୁଡ଼ି ସୁରକ୍ଷା ଯୋଜନାରେ ଆପଣଙ୍କୁ ସ୍ୱାଗତ।',
+    terms: 'ପ୍ରିମିୟମ ମାତ୍ର ₹୧୨୦। ଯଦି ୧୪ ଦିନରେ ବର୍ଷା ୩୫ ମିଲିମିଟରରୁ କମ ହୁଏ, ତେବେ ₹୫,୦୦୦ ପର୍ଯ୍ୟନ୍ତ ସ୍ୱତଃ ପରିଶୋଧ ମିଳିବ।'
   },
   en: {
     welcome: 'Welcome to KrishiSetu Kharif Groundnut Drought Shield.',
@@ -329,7 +356,7 @@ function switchAdminTab(tabId) {
 function setFarmerLanguage(lang) {
   currentLang = lang;
   
-  ['hi', 'te', 'en'].forEach(l => {
+  ['hi', 'te', 'or', 'en'].forEach(l => {
     const btn = document.getElementById(`lang-${l}`);
     if (btn) {
       if (l === lang) btn.classList.add('active');
@@ -347,6 +374,17 @@ function setFarmerLanguage(lang) {
 
   const compQ = document.getElementById('comp-question-text');
   if (compQ) compQ.innerText = `"${i18n.quiz_question}"`;
+
+  const qTitle = document.getElementById('lbl-query-title');
+  if (qTitle && i18n.query_title) qTitle.innerText = i18n.query_title;
+
+  const qAskBtn = document.getElementById('lbl-query-ask-btn');
+  if (qAskBtn && i18n.query_ask_btn) qAskBtn.innerText = i18n.query_ask_btn;
+
+  const qInput = document.getElementById('f-query-input');
+  if (qInput && i18n.query_placeholder) qInput.placeholder = i18n.query_placeholder;
+
+  renderQueryChips();
 }
 
 function getPrompt(key) {
@@ -363,8 +401,11 @@ function speakText(text, onEnd) {
   if ('speechSynthesis' in window) {
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = currentLang === 'hi' ? 'hi-IN' : currentLang === 'te' ? 'te-IN' : 'en-IN';
-    utterance.rate = 0.92;
+    if (currentLang === 'hi') utterance.lang = 'hi-IN';
+    else if (currentLang === 'te') utterance.lang = 'te-IN';
+    else if (currentLang === 'or') utterance.lang = 'or-IN';
+    else utterance.lang = 'en-IN';
+    utterance.rate = 0.90;
     
     utterance.onend = () => {
       if (waveEl) waveEl.classList.remove('active');
@@ -394,6 +435,11 @@ function speakHelpTopic(topic) {
       wallet: 'వాలెట్ సమాచారం: మీ నిధులు సురక్షితంగా ఉన్నాయి. భాగస్వామ్య దుకాణాల్లో ఆఫ్‌లైన్‌లో వాడుకోవచ్చు.',
       offline: 'ఆఫ్‌లైన్ భద్రత: ఇంటర్నెట్ అవసరం లేదు. నెట్‌వర్క్ వచ్చినప్పుడు ఆటోమేటిక్‌గా సింక్ అవుతుంది.'
     },
+    or: {
+      protection: 'ଫସଲ ସୁରକ୍ଷା ନିୟମ: ଯଦି ୧୪ ଦିନରେ ମୋଟ ବର୍ଷା ୩୫ ମିମି ସୀମାରୁ କମ ହୁଏ, ତେବେ ସ୍ୱତଃ ବୀମା ଟଙ୍କା ସିଧା ଆପଣଙ୍କ ୱାଲେଟରେ ଜମା ହେବ।',
+      wallet: 'ୱାଲେଟ୍ ବିବରଣୀ: ଆପଣଙ୍କ ଟଙ୍କା ଏହି ଫୋନରେ କ୍ରିପ୍ଟୋଗ୍ରାଫିକ ପ୍ରମାଣ ସହିତ ସୁରକ୍ଷିତ। ଇଣ୍ଟରନେଟ ବିନା ପ୍ରମାଣିତ ବିହନ-ଖତ ଦୋକାନରେ ଖର୍ଚ୍ଚ କରିପାରିବେ।',
+      offline: 'ଅଫଲାଇନ୍ ସୁରକ୍ଷା: ପ୍ରତିଦିନର ବ୍ୟବହାର ପାଇଁ ଇଣ୍ଟରନେଟ ଆବଶ୍ୟକ ନାହିଁ। ନେଟୱର୍କ ଆସିଲେ ସ୍ୱତଃ ସିଙ୍କ ହୋଇଯିବ।'
+    },
     en: {
       protection: 'Protection rules: If 14-day rainfall drops below 35 mm, automatic payout is credited directly to your offline wallet.',
       wallet: 'Wallet guide: Your balance is cryptographically preserved. Spend offline at certified agricultural partner shops anytime.',
@@ -408,6 +454,206 @@ function speakHelpTopic(topic) {
     speakText(fullSpeech);
   } else if (currentTopicScripts[topic]) {
     speakText(currentTopicScripts[topic]);
+  }
+}
+
+// =========================================================================
+// 3B. INTERACTIVE ASK QUERY ASSISTANT (MULTI-LINGUAL VOICE & TEXT)
+// =========================================================================
+const QUERY_SUGGESTIONS = {
+  or: [
+    { label: '💰 କେତେ ଟଙ୍କା ମିଳିବ?', query: 'କେତେ ଟଙ୍କା ମିଳିବ?' },
+    { label: '💳 ପ୍ରିମିୟମ କେତେ?', query: 'ପ୍ରିମିୟମ କେତେ?' },
+    { label: '📡 ଅଫଲାଇନରେ ଖର୍ଚ୍ଚ ହେବ କି?', query: 'ଇଣ୍ଟରନେଟ ବିନା ଖର୍ଚ୍ଚ ହେବ କି?' },
+    { label: '🌧️ ବର୍ତ୍ତମାନ ବର୍ଷା କେତେ?', query: 'ବର୍ତ୍ତମାନ ବର୍ଷା କେତେ?' }
+  ],
+  hi: [
+    { label: '💰 कितना बीमा मिलेगा?', query: 'बीमा राशि कितनी मिलेगी?' },
+    { label: '💳 प्रीमियम कितना है?', query: 'प्रीमियम कितना है?' },
+    { label: '📡 बिना इंटरनेट कैसे खर्च करें?', query: 'बिना इंटरनेट पैसे कैसे खर्च करें?' },
+    { label: '🌧️ वर्तमान बारिश कितनी है?', query: 'वर्तमान बारिश की स्थिति क्या है?' }
+  ],
+  te: [
+    { label: '💰 ఎంత పరిహారం వస్తుంది?', query: 'ఎంత పరిహారం వస్తుంది?' },
+    { label: '💳 ప్రీమియం ఎంత?', query: 'ప్రీమియం ఎంత?' },
+    { label: '📡 ఇంటర్నెట్ లేకుండా వాడొచ్చా?', query: 'ఇంటర్నెట్ లేకుండా ఖర్చు చేయవచ్చా?' },
+    { label: '🌧️ ప్రస్తుత వర్షపాతం ఎంత?', query: 'ప్రస్తుత వర్షపాతం ఎంత?' }
+  ],
+  en: [
+    { label: '💰 How much payout?', query: 'How much payout do I get?' },
+    { label: '💳 What is premium?', query: 'What is the policy premium?' },
+    { label: '📡 Can I spend offline?', query: 'Can I spend without internet?' },
+    { label: '🌧️ Current rainfall?', query: 'What is current rainfall status?' }
+  ]
+};
+
+let lastQueryAnswer = '';
+
+function renderQueryChips() {
+  const container = document.getElementById('f-query-chips-container');
+  if (!container) return;
+
+  const chips = QUERY_SUGGESTIONS[currentLang] || QUERY_SUGGESTIONS.hi;
+  container.innerHTML = chips.map(c => `
+    <button class="farmer-lang-btn" style="padding: 4px 10px; font-size: 12px; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: #e2e8f0; border-radius: 20px;" onclick="submitFarmerQuery('${c.query.replace(/'/g, "\\'")}')">
+      ${c.label}
+    </button>
+  `).join('');
+}
+
+function startVoiceQuery() {
+  const micBtn = document.getElementById('f-query-mic-btn');
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  if (!SpeechRecognition) {
+    const manualPrompt = prompt(
+      currentLang === 'or' ? 'ଦୟାକରି ଆପଣଙ୍କ ପ୍ରଶ୍ନ ଲେଖନ୍ତୁ:' :
+      currentLang === 'te' ? 'దయచేసి మీ ప్రశ్నను టైప్ చేయండి:' :
+      currentLang === 'hi' ? 'कृपया अपना प्रश्न लिखें:' : 'Please enter your question:',
+      ''
+    );
+    if (manualPrompt) submitFarmerQuery(manualPrompt);
+    return;
+  }
+
+  const recognition = new SpeechRecognition();
+  recognition.lang = currentLang === 'hi' ? 'hi-IN' : currentLang === 'te' ? 'te-IN' : currentLang === 'or' ? 'or-IN' : 'en-IN';
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  if (micBtn) micBtn.classList.add('listening');
+
+  recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+    const input = document.getElementById('f-query-input');
+    if (input) input.value = transcript;
+    submitFarmerQuery(transcript);
+  };
+
+  recognition.onspeechend = () => {
+    recognition.stop();
+    if (micBtn) micBtn.classList.remove('listening');
+  };
+
+  recognition.onerror = (event) => {
+    if (micBtn) micBtn.classList.remove('listening');
+    console.warn('[SpeechRecognition Error]', event.error);
+  };
+
+  try {
+    recognition.start();
+  } catch (e) {
+    if (micBtn) micBtn.classList.remove('listening');
+  }
+}
+
+function submitFarmerQuery(customQuery) {
+  const inputEl = document.getElementById('f-query-input');
+  const queryText = (customQuery || (inputEl ? inputEl.value : '')).trim();
+  if (!queryText) return;
+
+  if (inputEl) inputEl.value = queryText;
+  const answer = processFarmerQuery(queryText);
+  lastQueryAnswer = answer;
+
+  const resBox = document.getElementById('f-query-response-box');
+  const askedText = document.getElementById('f-query-asked-text');
+  const ansText = document.getElementById('f-query-answer-text');
+
+  if (resBox && askedText && ansText) {
+    resBox.style.display = 'block';
+    askedText.innerText = `Q: "${queryText}"`;
+    ansText.innerHTML = answer;
+  }
+
+  // Speak out the clean text aloud
+  const cleanSpeech = answer.replace(/<[^>]+>/g, '').replace(/&bull;/g, '.');
+  speakText(cleanSpeech);
+}
+
+function replayQueryVoice() {
+  if (lastQueryAnswer) {
+    const cleanSpeech = lastQueryAnswer.replace(/<[^>]+>/g, '').replace(/&bull;/g, '.');
+    speakText(cleanSpeech);
+  }
+}
+
+function processFarmerQuery(q) {
+  const query = q.toLowerCase();
+
+  // 1. Payout amount & guarantee
+  if (query.includes('କେତେ') || query.includes('ପରିଶୋଧ') || query.includes('ଟଙ୍କା') ||
+      query.includes('कितना') || query.includes('बीमा') || query.includes('राशि') ||
+      query.includes('ఎంత') || query.includes('పరిహారం') ||
+      query.includes('how much') || query.includes('payout') || query.includes('claim')) {
+    if (currentLang === 'or') {
+      return 'ମରୁଡ଼ି ପରିସ୍ଥିତିରେ (୧୪ ଦିନରେ ବର୍ଷା ୩୫ ମିମିରୁ କମ ହେଲେ) ଆପଣଙ୍କୁ ସର୍ବାଧିକ <strong>₹୫,୦୦୦</strong> ପର୍ଯ୍ୟନ୍ତ ସ୍ୱତଃ ପରିଶୋଧ ମିଳିବ। କୌଣସି ଫର୍ମ ପୂରଣ କରିବା ଆବଶ୍ୟକ ନାହିଁ।';
+    } else if (currentLang === 'te') {
+      return '14 రోజుల్లో వర్షపాతం 35 మి.మీ కంటే తగ్గితే, మీకు ఆటోమేటిక్‌గా గరిష్టంగా <strong>₹5,000</strong> పరిహారం అందుతుంది.';
+    } else if (currentLang === 'en') {
+      return 'Under drought conditions (14-day rainfall &le; 35 mm), you automatically receive up to <strong>₹5,000</strong> max guarantee directly into your offline wallet.';
+    } else {
+      return 'सूखे की स्थिति में (14 दिनों में बारिश 35 मिमी से कम होने पर) आपको अधिकतम <strong>₹5,000</strong> तक का स्वतः भुगतान सीधे वॉलेट में मिलेगा।';
+    }
+  }
+
+  // 2. Premium cost
+  if (query.includes('ପ୍ରିମିୟମ') || query.includes('ଖର୍ଚ୍ଚ') ||
+      query.includes('प्रीमियम') || query.includes('लागत') ||
+      query.includes('ప్రీమియం') ||
+      query.includes('premium') || query.includes('cost') || query.includes('price')) {
+    if (currentLang === 'or') {
+      return 'ଏହି ଖରିଫ ଚିନାବାଦାମ ଫସଲ ସୁରକ୍ଷାର ଏକକାଳୀନ ପ୍ରିମିୟମ ମାତ୍ର <strong>₹୧୨୦</strong>। ଏହା ପୁରା ଋତୁ ପାଇଁ ସୁରକ୍ଷିତ।';
+    } else if (currentLang === 'te') {
+      return 'ఈ పంట రక్షణ పథకం ప్రీమియం కేవలం <strong>₹120</strong> మాత్రమే. మొత్తం సీజన్ అంతా రక్షణ ఉంటుంది.';
+    } else if (currentLang === 'en') {
+      return 'The one-time seasonal premium is only <strong>₹120</strong>, giving comprehensive coverage for the entire Kharif cycle.';
+    } else {
+      return 'इस खरीफ फसल सुरक्षा का एकमुश्त प्रीमियम केवल <strong>₹120</strong> है। पूरे सीजन की सुरक्षा सक्रिय रहेगी।';
+    }
+  }
+
+  // 3. Offline spend & wallet
+  if (query.includes('ଅଫଲାଇନ') || query.includes('ଇଣ୍ଟରନେଟ') || query.includes('ୱାଲେଟ') || query.includes('ଦୋକାନ') ||
+      query.includes('ऑफलाइन') || query.includes('इंटरनेट') || query.includes('वॉलेट') || query.includes('दुकान') ||
+      query.includes('ఆఫ్‌లైన్') || query.includes('ఇంటర్నెట్') || query.includes('వాలెట్') ||
+      query.includes('offline') || query.includes('internet') || query.includes('wallet') || query.includes('spend') || query.includes('shop')) {
+    if (currentLang === 'or') {
+      return 'ହଁ! ଆପଣଙ୍କ ଟଙ୍କା ଫୋନରେ କ୍ରିପ୍ଟୋଗ୍ରାଫିକ ପ୍ରମାଣରେ ସୁରକ୍ଷିତ। ଆପଣ ଇଣ୍ଟରନେଟ ବିନା ପ୍ରମାଣିତ ବିହନ-ଖତ ଦୋକାନରେ ତୁରନ୍ତ ଟଙ୍କା ଖର୍ଚ୍ଚ କରିପାରିବେ।';
+    } else if (currentLang === 'te') {
+      return 'అవును! మీ నిధులు ఫోన్‌లో సురକ୍షితంగా ఉంటాయి. ఇంటర్నెట్ లేకపోయినా విత్తనాలు మరియు ఎరువుల దుకాణాల్లో ఆఫ్‌లైన్‌లో వాడవచ్చు.';
+    } else if (currentLang === 'en') {
+      return 'Yes! Your funds are cryptographically stored on this phone. You can spend offline at certified local seed/fertilizer input dealers anytime.';
+    } else {
+      return 'हाँ! आपका पैसा इस फोन में सुरक्षित है। इंटरनेट बंद होने पर भी आप प्रमाणित बीज-खाद दुकान पर तुरंत ऑफलाइन खर्च कर सकते हैं।';
+    }
+  }
+
+  // 4. Current rainfall & Weather
+  if (query.includes('ବର୍ଷା') || query.includes('ପାଣିପାଗ') ||
+      query.includes('बारिश') || query.includes('वर्षा') || query.includes('मौसम') ||
+      query.includes('వర్షం') || query.includes('వాతావరణం') ||
+      query.includes('rain') || query.includes('weather') || query.includes('rainfall') || query.includes('status')) {
+    if (currentLang === 'or') {
+      return 'ବର୍ତ୍ତମାନ ମଣ୍ଡଳରେ ୧୪ ଦିନର ହାରାହାରି ବର୍ଷା <strong>୧୮.୫ ମିଲିମିଟର</strong> ରେକର୍ଡ ହୋଇଛି (୩୫ ମିମି ସୀମାରୁ କମ)। ଏହା ୩ଟି ସ୍ୱତନ୍ତ୍ର ପାଣିପାଗ ଉତ୍ସ ଦ୍ୱାରା ନିଶ୍ଚିତ ହୋଇଛି।';
+    } else if (currentLang === 'te') {
+      return 'ప్రస్తుత 14 రోజుల వర్షపాతం <strong>18.5 మి.మీ</strong> గా నమోదైంది (35 మి.మీ పరిమితి కంటే తక్కువ). 3 వాతావరణ వନరులు దీనిని ధృవీకరించాయి.';
+    } else if (currentLang === 'en') {
+      return 'Current 14-day cumulative rainfall is consensus-verified at <strong>18.5 mm</strong> (below the 35.0 mm drought threshold) across 3 independent weather oracles.';
+    } else {
+      return 'वर्तमान में 14 दिनों की कुल वर्षा <strong>18.5 मिमी</strong> दर्ज की गई है (35 मिमी सीमा से कम)। 3 स्वतंत्र मौसम स्रोतों द्वारा इसकी पुष्टि की गई है।';
+    }
+  }
+
+  // 5. Default general assistant answer
+  if (currentLang === 'or') {
+    return 'କୃଷି-ସେତୁ ଏକ ସ୍ୱତଃ ଫସଲ ବୀମା ପ୍ଲାଟଫର୍ମ। ବର୍ଷା ୩୫ ମିମିରୁ କମ ହେଲେ ₹୫,୦୦୦ ପର୍ଯ୍ୟନ୍ତ ସ୍ୱତଃ ପରିଶୋଧ ଆପଣଙ୍କ ଅଫଲାଇନ୍ ୱାଲେଟରେ ଜମା ହୋଇଯିବ। ପ୍ରିମିୟମ ମାତ୍ର ₹୧୨୦।';
+  } else if (currentLang === 'te') {
+    return 'కృషి-సేతు ఆటోమేటిక్ పంట రక్షణ ప్లాట్‌ఫామ్. వర్షపాతం 35 మి.మీ కంటే తగ్గితే ₹5,000 వరకు పరిహారం మీ ఆఫ్‌లైన్ వాలెట్‌కు చేరుతుంది. ప్రీమియం ₹120 మాత్రమే.';
+  } else if (currentLang === 'en') {
+    return 'KrishiSetu is an offline-first parametric insurance platform. If 14-day rainfall drops below 35 mm, up to ₹5,000 is automatically credited to your wallet. Seasonal premium is ₹120.';
+  } else {
+    return 'कृषि-सेतु एक स्वतः फसल बीमा प्रणाली है। यदि 14 दिनों में वर्षा 35 मिमी से कम होती है, तो ₹5,000 तक का दावा सीधे आपके वॉलेट में जमा हो जाता है। प्रीमियम मात्र ₹120 है।';
   }
 }
 

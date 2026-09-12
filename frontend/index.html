@@ -241,6 +241,7 @@
             <div class="farmer-lang-strip">
               <button class="farmer-lang-btn active" id="lang-hi" onclick="setFarmerLanguage('hi')">हिंदी</button>
               <button class="farmer-lang-btn" id="lang-te" onclick="setFarmerLanguage('te')">తెలుగు</button>
+              <button class="farmer-lang-btn" id="lang-or" onclick="setFarmerLanguage('or')">ଓଡ଼ିଆ</button>
               <button class="farmer-lang-btn" id="lang-en" onclick="setFarmerLanguage('en')">EN</button>
             </div>
             <button class="farmer-lang-btn" onclick="logoutUser()" style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); color: var(--rose-500);">
@@ -327,6 +328,44 @@
               <button class="farmer-btn-secondary" onclick="openFarmerScreen('policy')" style="margin-top: 14px;">
                 View Coverage Rules &rarr;
               </button>
+            </div>
+          </div>
+
+          <!-- Interactive Voice & Text Ask Query Assistant -->
+          <div class="farmer-card" style="margin-bottom: 20px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(14, 165, 233, 0.08) 100%); border: 1px solid rgba(16, 185, 129, 0.25);">
+            <div class="card-header-line" style="margin-bottom: 12px;">
+              <span class="card-title-text" style="color: var(--emerald-400); display: flex; align-items: center; gap: 8px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <span id="lbl-query-title">Ask Insurance Questions / ପ୍ରଶ୍ନ ପଚାରନ୍ତୁ / प्रश्न पूछें</span>
+              </span>
+              <span class="brand-tag" style="background: var(--emerald-glow); color: var(--emerald-400);">VOICE & TEXT AI</span>
+            </div>
+
+            <!-- Query Input Bar -->
+            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 12px;">
+              <button class="voice-big-mic" id="f-query-mic-btn" onclick="startVoiceQuery()" title="Speak your question" style="width: 44px; height: 44px; min-width: 44px; border-radius: 50%; padding: 0;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+              </button>
+              <input type="text" id="f-query-input" class="form-input" style="flex: 1; margin: 0; background: rgba(0,0,0,0.35); border-color: rgba(255,255,255,0.15);" placeholder="ପ୍ରଶ୍ନ ପଚାରନ୍ତୁ କିମ୍ବା ଟାଇପ କରନ୍ତୁ / Ask your question..." onkeydown="if(event.key==='Enter') submitFarmerQuery()">
+              <button class="farmer-btn-primary" style="margin: 0; width: auto; padding: 0 18px; white-space: nowrap;" onclick="submitFarmerQuery()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px;"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <span id="lbl-query-ask-btn">Ask / ପଚାରନ୍ତୁ</span>
+              </button>
+            </div>
+
+            <!-- Quick Query Suggestion Chips -->
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;" id="f-query-chips-container"></div>
+
+            <!-- Query Response Display Box -->
+            <div id="f-query-response-box" style="display: none; padding: 14px 16px; border-radius: var(--radius-sm); background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(16, 185, 129, 0.35);">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 6px;">
+                <span style="font-size: 12px; font-weight: 700; color: var(--text-secondary);" id="f-query-asked-text">Question</span>
+                <button class="farmer-lang-btn" style="padding: 2px 8px; font-size: 11px; display: flex; align-items: center; gap: 4px; color: var(--emerald-400); border-color: var(--emerald-glow);" onclick="replayQueryVoice()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+                  <span id="lbl-query-hear-btn">🔊 Hear Out Loud</span>
+                </button>
+              </div>
+              <div id="f-query-answer-text" style="font-size: 14px; color: #fff; line-height: 1.5; font-weight: 500;"></div>
             </div>
           </div>
 

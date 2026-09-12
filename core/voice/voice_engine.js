@@ -26,6 +26,16 @@ const VOICE_PROMPTS = {
     failed: 'సరికాని సమాధానం. దయచేసి నిబంధనలను మళ్లీ వినండి లేదా 1 నొక్కండి.',
     offline_payout_alert: 'శుభవార్త! మీ ప్రాంతంలో కరువు పరిస్థితి వల్ల ₹4,500 మీ వాలెట్‌లో జమ అయింది.'
   },
+  or: {
+    greeting: 'ନମସ୍କାର କୃଷକ ଭାଇ! କୃଷି-ସେତୁ ଫସଲ ସୁରକ୍ଷା ଯୋଜନାରେ ଆପଣଙ୍କୁ ସ୍ୱାଗତ।',
+    product_intro: 'ଖରିଫ ଚିନାବାଦାମ ମରୁଡ଼ି ସୁରକ୍ଷା ଯୋଜନା। ଯଦି ୧୪ ଦିନରେ ବର୍ଷା ୩୫ ମିଲିମିଟରରୁ କମ ହୁଏ, ତେବେ ଆପଣଙ୍କୁ ₹୫,୦୦୦ ପର୍ଯ୍ୟନ୍ତ ସ୍ୱତଃ ପରିଶୋଧ ମିଳିବ।',
+    premium_disclosure: 'ଏହି ବୀମାର ପ୍ରିମିୟମ ମାତ୍ର ₹୧୨୦। କୌଣସି କାଗଜପତ୍ର କିମ୍ବା ସର୍ଭେୟର ପରିଦର୍ଶନର ଆବଶ୍ୟକତା ନାହିଁ।',
+    trigger_disclosure: 'ବର୍ଷା କମ ହେବା ମାତ୍ରେ ଟଙ୍କା ସିଧାସଳଖ ଆପଣଙ୍କ ଅଫଲାଇନ୍ ୱାଲେଟରେ ଜମା ହୋଇଯିବ।',
+    quiz_intro: 'ଯୋଜନା ସକ୍ରିୟ କରିବା ପୂର୍ବରୁ, ଦୟାକରି ଏହି ଛୋଟ ପ୍ରଶ୍ନର ଉତ୍ତର ଦିଅନ୍ତୁ।',
+    passed: 'ଅଭିନନ୍ଦନ! ଆପଣଙ୍କ ବୁଝାମଣା ନିଶ୍ଚିତ ହୋଇଛି। ଆପଣଙ୍କ ପଲିସି ସକ୍ରିୟ ହୋଇଛି।',
+    failed: 'ଭୁଲ ଉତ୍ତର। ନିୟମ ପୁନର୍ବାର ଶୁଣିବା ପାଇଁ କିମ୍ବା ପୁନଃ ଚେଷ୍ଟା କରିବାକୁ ୧ ଦବାନ୍ତୁ।',
+    offline_payout_alert: 'ଖୁସି ଖବର! ଆପଣଙ୍କ ଅଞ୍ଚଳରେ ମରୁଡ଼ି ପାଇଁ ₹୪,୫୦୦ ବୀମା ଟଙ୍କା ୱାଲେଟରେ ଜମା ହୋଇଛି।'
+  },
   en: {
     greeting: 'Welcome to KrishiSetu Parametric Crop Protection.',
     product_intro: 'Kharif Groundnut Drought Shield. If rainfall over 14 days drops below 35 mm, you automatically receive up to ₹5,000 payout.',
@@ -46,7 +56,7 @@ class VoiceSessionController {
   }
 
   setLanguage(lang) {
-    if (['hi', 'te', 'en'].includes(lang)) {
+    if (['hi', 'te', 'or', 'en'].includes(lang)) {
       this.language = lang;
     }
   }
