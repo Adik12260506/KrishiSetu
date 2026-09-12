@@ -1,0 +1,27 @@
+{
+  "name": "fs-2604-krishisetu",
+  "version": "1.0.0",
+  "description": "FS-2604: Offline-First Parametric Micro-Insurance for Low-Connectivity Smallholder Farmers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "python scripts/test_eval_suite.py",
+    "test:determinism": "python scripts/test_determinism.py",
+    "test:payload": "python scripts/measure_payload.py",
+    "bench:cost": "python bench/cost_benchmark.py",
+    "bench:chaos": "python bench/chaos_bench.py"
+  },
+  "keywords": [
+    "fintech",
+    "parametric-insurance",
+    "offline-first",
+    "micro-insurance",
+    "oracle-consensus",
+    "low-connectivity"
+  ],
+  "author": "FS-2604 Hackathon Team",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^7.6.0"
+  }
+}

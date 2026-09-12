@@ -1,0 +1,1192 @@
+{
+  "users": [
+    {
+      "_id": "doc_1789194835766_suut9",
+      "user_id": "farmer_ramesh",
+      "pin_hash": "0c918c8f359f21c6862984396fc974e0733929c62678d10191f1f951a1c3d425",
+      "role": "FARMER",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T07:05:28.067Z",
+      "username": "farmer_ramesh"
+    },
+    {
+      "_id": "doc_1789195498215_2jzhk",
+      "user_id": "farmer_sita",
+      "username": "farmer_sita",
+      "pin_hash": "229909cb1be7ca864c6183e9fac69ae1399717ebadb6462f7aaf29ff261e1acb",
+      "role": "FARMER",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T07:05:28.067Z"
+    },
+    {
+      "_id": "doc_1789195498217_q20xt",
+      "user_id": "admin_user",
+      "username": "admin_user",
+      "pin_hash": "c62e6c6b2e7810f71e0fd3318ba910d8844863019ea27212077cff0aba3ee891",
+      "role": "ADMIN",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T07:05:28.068Z"
+    },
+    {
+      "_id": "doc_1789195498217_t5f11",
+      "user_id": "juror_eval",
+      "username": "juror_eval",
+      "pin_hash": "fc1cc383668041645354d9065b7a4f1068575187ea2a18bf94edbf12aa1d239e",
+      "role": "JUROR",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T07:05:28.068Z"
+    },
+    {
+      "_id": "doc_1789195503092_wp647",
+      "user_id": "farmer_ganesh",
+      "username": "farmer_ganesh",
+      "mobile": "9876543299",
+      "full_name": "Ganesh Rao",
+      "password_hash": "b40ba76e003d25b33c1ea202dfb0a4069ade39e6cf00241929badcffc067c6f0",
+      "pin_hash": "d11c8178d012259fd80bd1aafef766acfdc288d986983baabc0a8d0e8264e015",
+      "role": "FARMER",
+      "preferred_language": "hi",
+      "device_id": "DEV_HANDSET_01",
+      "created_at": "2026-09-12T06:45:03.092Z"
+    },
+    {
+      "_id": "doc_1789196566428_h7j4k",
+      "user_id": "farmer_farmerrajesh",
+      "username": "farmer_farmerrajesh",
+      "google_id": "1092837461928374",
+      "email": "farmer.rajesh@gmail.com",
+      "full_name": "Rajesh Kumar",
+      "picture": "https://lh3.googleusercontent.com/a/default-user",
+      "auth_provider": "GOOGLE",
+      "role": "FARMER",
+      "preferred_language": "hi",
+      "device_id": "DEV_HANDSET_01",
+      "created_at": "2026-09-12T07:02:46.428Z"
+    },
+    {
+      "_id": "doc_1789203304598_4kfjk",
+      "user_id": "farmer_farmeruser",
+      "username": "farmer_farmeruser",
+      "google_id": "GOOG_13fb1219",
+      "email": "farmer.user@gmail.com",
+      "full_name": "Farmer User",
+      "picture": "https://api.dicebear.com/7.x/bottts/svg?seed=farmer.user%40gmail.com",
+      "auth_provider": "GOOGLE",
+      "role": "FARMER",
+      "preferred_language": "hi",
+      "device_id": "DEV_WEB_CLIENT",
+      "created_at": "2026-09-12T08:55:04.597Z"
+    }
+  ],
+  "sessions": [
+    {
+      "_id": "doc_1789194835767_2e49u",
+      "token": "KS_SESS_4ff7a6c3cc68776821c3ed112e89872d4d659b40c7e0c27c",
+      "user_id": "farmer_ramesh",
+      "role": "FARMER",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T06:33:55.767Z",
+      "expires_at": "2026-09-13T06:33:55.767Z",
+      "is_revoked": true,
+      "revoked_at": "2026-09-12T06:33:55.768Z"
+    },
+    {
+      "_id": "doc_1789194880155_ov2r0",
+      "token": "KS_SESS_4794c03f899f6fc91f60d62d0fc007d1a546cbb3a35bb23f",
+      "user_id": "farmer_ramesh",
+      "role": "FARMER",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T06:34:40.155Z",
+      "expires_at": "2026-09-13T06:34:40.154Z",
+      "is_revoked": true,
+      "revoked_at": "2026-09-12T06:34:40.155Z"
+    },
+    {
+      "_id": "doc_1789194912371_pfs18",
+      "token": "KS_SESS_519b2edf64c98e63a09a505ee26547e55ad885b1335d40cb",
+      "user_id": "farmer_ramesh",
+      "role": "FARMER",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T06:35:12.370Z",
+      "expires_at": "2026-09-13T06:35:12.370Z",
+      "is_revoked": true,
+      "revoked_at": "2026-09-12T06:35:12.371Z"
+    },
+    {
+      "_id": "doc_1789194917946_s4vjs",
+      "token": "KS_SESS_3fec792feb73bc3b36100bc480a0377b5673439e294931b8",
+      "user_id": "farmer_ramesh",
+      "role": "FARMER",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T06:35:17.946Z",
+      "expires_at": "2026-09-13T06:35:17.945Z",
+      "is_revoked": true,
+      "revoked_at": "2026-09-12T06:35:17.946Z"
+    },
+    {
+      "_id": "doc_1789194947580_9n4gb",
+      "token": "KS_SESS_c72ebb26651c184bdf9e0e64fb88a8c55e50af6f52fa4d4b",
+      "user_id": "farmer_ramesh",
+      "role": "FARMER",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T06:35:47.580Z",
+      "expires_at": "2026-09-13T06:35:47.579Z",
+      "is_revoked": true,
+      "revoked_at": "2026-09-12T06:35:47.581Z"
+    },
+    {
+      "_id": "doc_1789195212397_y0117",
+      "token": "KS_SESS_8ad02f5f63e7f64b77544d48b9cd9dd655040a32538f8963",
+      "user_id": "farmer_ramesh",
+      "role": "FARMER",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T06:40:12.397Z",
+      "expires_at": "2026-09-13T06:40:12.396Z",
+      "is_revoked": true,
+      "revoked_at": "2026-09-12T06:40:12.398Z"
+    },
+    {
+      "_id": "doc_1789195503092_jik8l",
+      "token": "KS_SESS_4ce2dc0c89bd1bbcb66c483f47f4e97998bdfa01faaa4391",
+      "user_id": "farmer_ganesh",
+      "role": "FARMER",
+      "device_id": "DEV_HANDSET_01",
+      "created_at": "2026-09-12T06:45:03.092Z",
+      "expires_at": "2026-09-13T06:45:03.092Z",
+      "is_revoked": false
+    },
+    {
+      "_id": "doc_1789195553574_j6nxp",
+      "token": "KS_SESS_ceb93a407cd08e7f4fccbe04d2ef50b24d36924c1b07e4e1",
+      "user_id": "farmer_ramesh",
+      "role": "FARMER",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T06:45:53.574Z",
+      "expires_at": "2026-09-13T06:45:53.574Z",
+      "is_revoked": true,
+      "revoked_at": "2026-09-12T06:45:53.574Z"
+    },
+    {
+      "_id": "doc_1789195767021_zxlcs",
+      "token": "KS_SESS_0c79ecbd8d89c94657dadafbe2b7682fe3bafd55698d2d2e",
+      "user_id": "farmer_ramesh",
+      "role": "FARMER",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T06:49:27.021Z",
+      "expires_at": "2026-09-13T06:49:27.021Z",
+      "is_revoked": true,
+      "revoked_at": "2026-09-12T06:49:27.022Z"
+    },
+    {
+      "_id": "doc_1789196392501_64kub",
+      "token": "KS_SESS_7ad5172ea5108966ed663fad8b6aaf1dea688a94bde90f99",
+      "user_id": "farmer_ramesh",
+      "role": "FARMER",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T06:59:52.501Z",
+      "expires_at": "2026-09-13T06:59:52.501Z",
+      "is_revoked": true,
+      "revoked_at": "2026-09-12T06:59:52.501Z"
+    },
+    {
+      "_id": "doc_1789196566429_aomvu",
+      "token": "KS_SESS_dea28cacc2212bb2120468c22269468a2e47f0ee4c5d76bc",
+      "user_id": "farmer_farmerrajesh",
+      "role": "FARMER",
+      "device_id": "DEV_HANDSET_01",
+      "created_at": "2026-09-12T07:02:46.429Z",
+      "expires_at": "2026-09-13T07:02:46.429Z",
+      "is_revoked": false
+    },
+    {
+      "_id": "doc_1789196573816_w2hb2",
+      "token": "KS_SESS_ba06537834d6d1d9021060c5f6979f728dbdda5c02a0d2ce",
+      "user_id": "farmer_ramesh",
+      "role": "FARMER",
+      "device_id": "DEV_DEFAULT",
+      "created_at": "2026-09-12T07:02:53.815Z",
+      "expires_at": "2026-09-13T07:02:53.815Z",
+      "is_revoked": true,
+      "revoked_at": "2026-09-12T07:02:53.816Z"
+    },
+    {
+      "_id": "doc_1789203304600_wzg8u",
+      "token": "KS_SESS_3d79d900a621095d497873bc29b9b22f24a04ac70dbfba7c",
+      "user_id": "farmer_farmeruser",
+      "role": "FARMER",
+      "device_id": "DEV_WEB_CLIENT",
+      "created_at": "2026-09-12T08:55:04.600Z",
+      "expires_at": "2026-09-13T08:55:04.600Z",
+      "is_revoked": false
+    }
+  ],
+  "policies": [
+    {
+      "_id": "restart-test-shield-v1",
+      "product_id": "restart-test-shield-v1",
+      "name": "Restart Safety Shield",
+      "crop": "Soybean",
+      "region": "Vidarbha",
+      "premium_inr": 150,
+      "max_payout_inr": 6000,
+      "rainfall_threshold_mm": 30,
+      "version": "1.0.0",
+      "updated_at": "2026-09-12T06:35:18.909Z"
+    },
+    {
+      "_id": "monsoon-drought-groundnut-v1",
+      "product_id": "monsoon-drought-groundnut-v1",
+      "name": "Kharif Groundnut Drought Shield",
+      "crop": "Groundnut",
+      "region": "Anantapur / Rayalaseema",
+      "season": "Kharif 2026",
+      "premium_inr": 120,
+      "max_payout_inr": 5000,
+      "rainfall_threshold_mm": 35,
+      "measurement_window_days": 14,
+      "payout_formula": {
+        "type": "LINEAR_PRO_RATA",
+        "threshold_mm": 35,
+        "exit_threshold_mm": 35,
+        "max_payout_inr": 5000
+      },
+      "oracle_requirements": {
+        "min_sources": 2,
+        "max_stale_minutes": 180,
+        "max_allowed_variance_mm": 12
+      },
+      "effective_from": "2026-06-01T00:00:00Z",
+      "effective_to": "2026-11-30T23:59:59Z",
+      "version": "1.0.0",
+      "description": "Automatic parametric drought coverage for rainfed groundnut farmers. Payout scales linearly as rainfall drops below 35mm over 14 days.",
+      "updated_at": "2026-09-12T07:05:28.049Z"
+    },
+    {
+      "_id": "kharif-paddy-deficit-v1",
+      "product_id": "kharif-paddy-deficit-v1",
+      "name": "Paddy Critical Sowing Protection",
+      "crop": "Paddy / Rice",
+      "region": "Warangal / North Telangana",
+      "season": "Kharif 2026",
+      "premium_inr": 250,
+      "max_payout_inr": 10000,
+      "rainfall_threshold_mm": 50,
+      "measurement_window_days": 21,
+      "payout_formula": {
+        "type": "MULTI_TIER_DROUGHT",
+        "threshold_mm": 50,
+        "max_payout_inr": 10000,
+        "tiers": [
+          {
+            "max_rain": 15,
+            "payout_pct": 1
+          },
+          {
+            "max_rain": 30,
+            "payout_pct": 0.6
+          },
+          {
+            "max_rain": 50,
+            "payout_pct": 0.3
+          }
+        ]
+      },
+      "oracle_requirements": {
+        "min_sources": 2,
+        "max_stale_minutes": 180,
+        "max_allowed_variance_mm": 15
+      },
+      "effective_from": "2026-06-01T00:00:00Z",
+      "effective_to": "2026-11-30T23:59:59Z",
+      "version": "1.0.0",
+      "description": "Tiered parametric deficit coverage for critical nursery and transplanting stages.",
+      "updated_at": "2026-09-12T07:05:28.066Z"
+    }
+  ],
+  "farmers": [
+    {
+      "_id": "test_farmer_ledger_1789194836032",
+      "farmer_id": "test_farmer_ledger_1789194836032",
+      "server_sequence": 4,
+      "confirmed_balance": 2500,
+      "events": [
+        {
+          "event_id": "EVT_C1",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 4500,
+          "sequence": 1
+        },
+        {
+          "event_id": "EVT_S1",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 1200,
+          "sequence": 2
+        },
+        {
+          "event_id": "EVT_S2",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 800,
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "_id": "farmer_dup_sec_1789194836250",
+      "farmer_id": "farmer_dup_sec_1789194836250",
+      "server_sequence": 2,
+      "confirmed_balance": 5000,
+      "events": [
+        {
+          "event_id": "EVT_UNIQUE_PAY",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 5000,
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "_id": "farmer_restart_01",
+      "farmer_id": "farmer_restart_01",
+      "server_sequence": 2,
+      "confirmed_balance": 4500,
+      "events": [
+        {
+          "event_id": "EVT_RESTART_01",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 4500,
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "_id": "test_farmer_ledger_1789194880419",
+      "farmer_id": "test_farmer_ledger_1789194880419",
+      "server_sequence": 0,
+      "confirmed_balance": 0,
+      "events": []
+    },
+    {
+      "_id": "farmer_dup_sec_1789194880633",
+      "farmer_id": "farmer_dup_sec_1789194880633",
+      "server_sequence": 0,
+      "confirmed_balance": 0,
+      "events": []
+    },
+    {
+      "_id": "test_user_debug",
+      "farmer_id": "test_user_debug",
+      "server_sequence": 2,
+      "confirmed_balance": 4500,
+      "events": [
+        {
+          "event_id": "E1",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 4500,
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "_id": "test_farmer_ledger_1789194912620",
+      "farmer_id": "test_farmer_ledger_1789194912620",
+      "server_sequence": 4,
+      "confirmed_balance": 2500,
+      "events": [
+        {
+          "event_id": "test_farmer_ledger_1789194912620_C1",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 4500,
+          "sequence": 1
+        },
+        {
+          "event_id": "test_farmer_ledger_1789194912620_S1",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 1200,
+          "sequence": 2
+        },
+        {
+          "event_id": "test_farmer_ledger_1789194912620_S2",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 800,
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "_id": "farmer_dup_sec_1789194912822",
+      "farmer_id": "farmer_dup_sec_1789194912822",
+      "server_sequence": 2,
+      "confirmed_balance": 5000,
+      "events": [
+        {
+          "event_id": "EVT_DUP_farmer_dup_sec_1789194912822",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 5000,
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "_id": "test_farmer_ledger_1789194918207",
+      "farmer_id": "test_farmer_ledger_1789194918207",
+      "server_sequence": 4,
+      "confirmed_balance": 2500,
+      "events": [
+        {
+          "event_id": "test_farmer_ledger_1789194918207_C1",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 4500,
+          "sequence": 1
+        },
+        {
+          "event_id": "test_farmer_ledger_1789194918207_S1",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 1200,
+          "sequence": 2
+        },
+        {
+          "event_id": "test_farmer_ledger_1789194918207_S2",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 800,
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "_id": "farmer_dup_sec_1789194918409",
+      "farmer_id": "farmer_dup_sec_1789194918409",
+      "server_sequence": 2,
+      "confirmed_balance": 5000,
+      "events": [
+        {
+          "event_id": "EVT_DUP_farmer_dup_sec_1789194918409",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 5000,
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "_id": "test_farmer_ledger_1789194947826",
+      "farmer_id": "test_farmer_ledger_1789194947826",
+      "server_sequence": 4,
+      "confirmed_balance": 2500,
+      "events": [
+        {
+          "event_id": "test_farmer_ledger_1789194947826_C1",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 4500,
+          "sequence": 1
+        },
+        {
+          "event_id": "test_farmer_ledger_1789194947826_S1",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 1200,
+          "sequence": 2
+        },
+        {
+          "event_id": "test_farmer_ledger_1789194947826_S2",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 800,
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "_id": "farmer_dup_sec_1789194948034",
+      "farmer_id": "farmer_dup_sec_1789194948034",
+      "server_sequence": 2,
+      "confirmed_balance": 5000,
+      "events": [
+        {
+          "event_id": "EVT_DUP_farmer_dup_sec_1789194948034",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 5000,
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "_id": "test_farmer_ledger_1789195212659",
+      "farmer_id": "test_farmer_ledger_1789195212659",
+      "server_sequence": 4,
+      "confirmed_balance": 2500,
+      "events": [
+        {
+          "event_id": "test_farmer_ledger_1789195212659_C1",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 4500,
+          "sequence": 1
+        },
+        {
+          "event_id": "test_farmer_ledger_1789195212659_S1",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 1200,
+          "sequence": 2
+        },
+        {
+          "event_id": "test_farmer_ledger_1789195212659_S2",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 800,
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "_id": "farmer_dup_sec_1789195212873",
+      "farmer_id": "farmer_dup_sec_1789195212873",
+      "server_sequence": 2,
+      "confirmed_balance": 5000,
+      "events": [
+        {
+          "event_id": "EVT_DUP_farmer_dup_sec_1789195212873",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 5000,
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "_id": "test_farmer_ledger_1789195553846",
+      "farmer_id": "test_farmer_ledger_1789195553846",
+      "server_sequence": 4,
+      "confirmed_balance": 2500,
+      "events": [
+        {
+          "event_id": "test_farmer_ledger_1789195553846_C1",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 4500,
+          "sequence": 1
+        },
+        {
+          "event_id": "test_farmer_ledger_1789195553846_S1",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 1200,
+          "sequence": 2
+        },
+        {
+          "event_id": "test_farmer_ledger_1789195553846_S2",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 800,
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "_id": "farmer_dup_sec_1789195554068",
+      "farmer_id": "farmer_dup_sec_1789195554068",
+      "server_sequence": 2,
+      "confirmed_balance": 5000,
+      "events": [
+        {
+          "event_id": "EVT_DUP_farmer_dup_sec_1789195554068",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 5000,
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "_id": "test_farmer_ledger_1789195767283",
+      "farmer_id": "test_farmer_ledger_1789195767283",
+      "server_sequence": 4,
+      "confirmed_balance": 2500,
+      "events": [
+        {
+          "event_id": "test_farmer_ledger_1789195767283_C1",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 4500,
+          "sequence": 1
+        },
+        {
+          "event_id": "test_farmer_ledger_1789195767283_S1",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 1200,
+          "sequence": 2
+        },
+        {
+          "event_id": "test_farmer_ledger_1789195767283_S2",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 800,
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "_id": "farmer_dup_sec_1789195767495",
+      "farmer_id": "farmer_dup_sec_1789195767495",
+      "server_sequence": 2,
+      "confirmed_balance": 5000,
+      "events": [
+        {
+          "event_id": "EVT_DUP_farmer_dup_sec_1789195767495",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 5000,
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "_id": "test_farmer_ledger_1789196392763",
+      "farmer_id": "test_farmer_ledger_1789196392763",
+      "server_sequence": 4,
+      "confirmed_balance": 2500,
+      "events": [
+        {
+          "event_id": "test_farmer_ledger_1789196392763_C1",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 4500,
+          "sequence": 1
+        },
+        {
+          "event_id": "test_farmer_ledger_1789196392763_S1",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 1200,
+          "sequence": 2
+        },
+        {
+          "event_id": "test_farmer_ledger_1789196392763_S2",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 800,
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "_id": "farmer_dup_sec_1789196392978",
+      "farmer_id": "farmer_dup_sec_1789196392978",
+      "server_sequence": 2,
+      "confirmed_balance": 5000,
+      "events": [
+        {
+          "event_id": "EVT_DUP_farmer_dup_sec_1789196392978",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 5000,
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "_id": "test_farmer_ledger_1789196574078",
+      "farmer_id": "test_farmer_ledger_1789196574078",
+      "server_sequence": 4,
+      "confirmed_balance": 2500,
+      "events": [
+        {
+          "event_id": "test_farmer_ledger_1789196574078_C1",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 4500,
+          "sequence": 1
+        },
+        {
+          "event_id": "test_farmer_ledger_1789196574078_S1",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 1200,
+          "sequence": 2
+        },
+        {
+          "event_id": "test_farmer_ledger_1789196574078_S2",
+          "event_type": "OFFLINE_SPEND",
+          "amount_inr": 800,
+          "sequence": 3
+        }
+      ]
+    },
+    {
+      "_id": "farmer_dup_sec_1789196574288",
+      "farmer_id": "farmer_dup_sec_1789196574288",
+      "server_sequence": 2,
+      "confirmed_balance": 5000,
+      "events": [
+        {
+          "event_id": "EVT_DUP_farmer_dup_sec_1789196574288",
+          "event_type": "PAYOUT_CREDIT",
+          "amount_inr": 5000,
+          "sequence": 1
+        }
+      ]
+    },
+    {
+      "_id": "farmer_user",
+      "farmer_id": "farmer_user",
+      "server_sequence": 2,
+      "confirmed_balance": 0,
+      "events": [
+        {
+          "event_type": "POLICY_BIND",
+          "type_code": 1,
+          "event_id_hash": 0,
+          "target_hash": 0,
+          "amount_inr": 0,
+          "sequence": 1,
+          "timestamp_sec": 1789204363
+        }
+      ]
+    }
+  ],
+  "payouts": [
+    {
+      "_id": "PAY_UNIQUE_TEST_001",
+      "payout_id": "PAY_UNIQUE_TEST_001",
+      "decision_id": "DEC_UNIQUE_TEST_001",
+      "farmer_id": "farmer_dup_sec_1789194836250",
+      "amount_inr": 5000,
+      "created_at": "2026-09-12T06:33:56.250Z"
+    },
+    {
+      "_id": "PAY_RESTART_999",
+      "payout_id": "PAY_RESTART_999",
+      "decision_id": "DEC_RESTART_999",
+      "farmer_id": "farmer_restart_01",
+      "policy_id": "restart-test-shield-v1",
+      "amount_inr": 4500,
+      "created_at": "2026-09-12T06:34:09.885Z"
+    },
+    {
+      "_id": "PAY_DUP_farmer_dup_sec_1789194912822",
+      "payout_id": "PAY_DUP_farmer_dup_sec_1789194912822",
+      "decision_id": "DEC_DUP_farmer_dup_sec_1789194912822",
+      "farmer_id": "farmer_dup_sec_1789194912822",
+      "amount_inr": 5000,
+      "created_at": "2026-09-12T06:35:12.823Z"
+    },
+    {
+      "_id": "PAY_DUP_farmer_dup_sec_1789194918409",
+      "payout_id": "PAY_DUP_farmer_dup_sec_1789194918409",
+      "decision_id": "DEC_DUP_farmer_dup_sec_1789194918409",
+      "farmer_id": "farmer_dup_sec_1789194918409",
+      "amount_inr": 5000,
+      "created_at": "2026-09-12T06:35:18.409Z"
+    },
+    {
+      "_id": "PAY_DUP_farmer_dup_sec_1789194948034",
+      "payout_id": "PAY_DUP_farmer_dup_sec_1789194948034",
+      "decision_id": "DEC_DUP_farmer_dup_sec_1789194948034",
+      "farmer_id": "farmer_dup_sec_1789194948034",
+      "amount_inr": 5000,
+      "created_at": "2026-09-12T06:35:48.034Z"
+    },
+    {
+      "_id": "PAY_DUP_farmer_dup_sec_1789195212873",
+      "payout_id": "PAY_DUP_farmer_dup_sec_1789195212873",
+      "decision_id": "DEC_DUP_farmer_dup_sec_1789195212873",
+      "farmer_id": "farmer_dup_sec_1789195212873",
+      "amount_inr": 5000,
+      "created_at": "2026-09-12T06:40:12.873Z"
+    },
+    {
+      "_id": "PAY_DUP_farmer_dup_sec_1789195554068",
+      "payout_id": "PAY_DUP_farmer_dup_sec_1789195554068",
+      "decision_id": "DEC_DUP_farmer_dup_sec_1789195554068",
+      "farmer_id": "farmer_dup_sec_1789195554068",
+      "amount_inr": 5000,
+      "created_at": "2026-09-12T06:45:54.069Z"
+    },
+    {
+      "_id": "PAY_DUP_farmer_dup_sec_1789195767495",
+      "payout_id": "PAY_DUP_farmer_dup_sec_1789195767495",
+      "decision_id": "DEC_DUP_farmer_dup_sec_1789195767495",
+      "farmer_id": "farmer_dup_sec_1789195767495",
+      "amount_inr": 5000,
+      "created_at": "2026-09-12T06:49:27.495Z"
+    },
+    {
+      "_id": "PAY_DUP_farmer_dup_sec_1789196392978",
+      "payout_id": "PAY_DUP_farmer_dup_sec_1789196392978",
+      "decision_id": "DEC_DUP_farmer_dup_sec_1789196392978",
+      "farmer_id": "farmer_dup_sec_1789196392978",
+      "amount_inr": 5000,
+      "created_at": "2026-09-12T06:59:52.978Z"
+    },
+    {
+      "_id": "PAY_DUP_farmer_dup_sec_1789196574288",
+      "payout_id": "PAY_DUP_farmer_dup_sec_1789196574288",
+      "decision_id": "DEC_DUP_farmer_dup_sec_1789196574288",
+      "farmer_id": "farmer_dup_sec_1789196574288",
+      "amount_inr": 5000,
+      "created_at": "2026-09-12T07:02:54.288Z"
+    }
+  ],
+  "sync_events": [
+    {
+      "_id": "EVT_C1",
+      "event_id": "EVT_C1",
+      "user_id": "test_farmer_ledger_1789194836032",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 4500,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:33:56.032Z"
+    },
+    {
+      "_id": "EVT_S1",
+      "event_id": "EVT_S1",
+      "user_id": "test_farmer_ledger_1789194836032",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 1200,
+      "sequence": 2,
+      "persisted_at": "2026-09-12T06:33:56.034Z"
+    },
+    {
+      "_id": "EVT_S2",
+      "event_id": "EVT_S2",
+      "user_id": "test_farmer_ledger_1789194836032",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 800,
+      "sequence": 3,
+      "persisted_at": "2026-09-12T06:33:56.035Z"
+    },
+    {
+      "_id": "EVT_UNIQUE_PAY",
+      "event_id": "EVT_UNIQUE_PAY",
+      "user_id": "farmer_dup_sec_1789194836250",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 5000,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:33:56.251Z"
+    },
+    {
+      "_id": "EVT_RESTART_01",
+      "event_id": "EVT_RESTART_01",
+      "user_id": "farmer_restart_01",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 4500,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:34:09.885Z"
+    },
+    {
+      "_id": "E1",
+      "event_id": "E1",
+      "user_id": "test_user_debug",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 4500,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:34:50.305Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789194912620_C1",
+      "event_id": "test_farmer_ledger_1789194912620_C1",
+      "user_id": "test_farmer_ledger_1789194912620",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 4500,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:35:12.620Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789194912620_S1",
+      "event_id": "test_farmer_ledger_1789194912620_S1",
+      "user_id": "test_farmer_ledger_1789194912620",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 1200,
+      "sequence": 2,
+      "persisted_at": "2026-09-12T06:35:12.622Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789194912620_S2",
+      "event_id": "test_farmer_ledger_1789194912620_S2",
+      "user_id": "test_farmer_ledger_1789194912620",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 800,
+      "sequence": 3,
+      "persisted_at": "2026-09-12T06:35:12.623Z"
+    },
+    {
+      "_id": "EVT_DUP_farmer_dup_sec_1789194912822",
+      "event_id": "EVT_DUP_farmer_dup_sec_1789194912822",
+      "user_id": "farmer_dup_sec_1789194912822",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 5000,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:35:12.824Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789194918207_C1",
+      "event_id": "test_farmer_ledger_1789194918207_C1",
+      "user_id": "test_farmer_ledger_1789194918207",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 4500,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:35:18.208Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789194918207_S1",
+      "event_id": "test_farmer_ledger_1789194918207_S1",
+      "user_id": "test_farmer_ledger_1789194918207",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 1200,
+      "sequence": 2,
+      "persisted_at": "2026-09-12T06:35:18.210Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789194918207_S2",
+      "event_id": "test_farmer_ledger_1789194918207_S2",
+      "user_id": "test_farmer_ledger_1789194918207",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 800,
+      "sequence": 3,
+      "persisted_at": "2026-09-12T06:35:18.210Z"
+    },
+    {
+      "_id": "EVT_DUP_farmer_dup_sec_1789194918409",
+      "event_id": "EVT_DUP_farmer_dup_sec_1789194918409",
+      "user_id": "farmer_dup_sec_1789194918409",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 5000,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:35:18.410Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789194947826_C1",
+      "event_id": "test_farmer_ledger_1789194947826_C1",
+      "user_id": "test_farmer_ledger_1789194947826",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 4500,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:35:47.826Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789194947826_S1",
+      "event_id": "test_farmer_ledger_1789194947826_S1",
+      "user_id": "test_farmer_ledger_1789194947826",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 1200,
+      "sequence": 2,
+      "persisted_at": "2026-09-12T06:35:47.828Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789194947826_S2",
+      "event_id": "test_farmer_ledger_1789194947826_S2",
+      "user_id": "test_farmer_ledger_1789194947826",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 800,
+      "sequence": 3,
+      "persisted_at": "2026-09-12T06:35:47.829Z"
+    },
+    {
+      "_id": "EVT_DUP_farmer_dup_sec_1789194948034",
+      "event_id": "EVT_DUP_farmer_dup_sec_1789194948034",
+      "user_id": "farmer_dup_sec_1789194948034",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 5000,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:35:48.035Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789195212659_C1",
+      "event_id": "test_farmer_ledger_1789195212659_C1",
+      "user_id": "test_farmer_ledger_1789195212659",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 4500,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:40:12.659Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789195212659_S1",
+      "event_id": "test_farmer_ledger_1789195212659_S1",
+      "user_id": "test_farmer_ledger_1789195212659",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 1200,
+      "sequence": 2,
+      "persisted_at": "2026-09-12T06:40:12.662Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789195212659_S2",
+      "event_id": "test_farmer_ledger_1789195212659_S2",
+      "user_id": "test_farmer_ledger_1789195212659",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 800,
+      "sequence": 3,
+      "persisted_at": "2026-09-12T06:40:12.662Z"
+    },
+    {
+      "_id": "EVT_DUP_farmer_dup_sec_1789195212873",
+      "event_id": "EVT_DUP_farmer_dup_sec_1789195212873",
+      "user_id": "farmer_dup_sec_1789195212873",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 5000,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:40:12.874Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789195553846_C1",
+      "event_id": "test_farmer_ledger_1789195553846_C1",
+      "user_id": "test_farmer_ledger_1789195553846",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 4500,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:45:53.846Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789195553846_S1",
+      "event_id": "test_farmer_ledger_1789195553846_S1",
+      "user_id": "test_farmer_ledger_1789195553846",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 1200,
+      "sequence": 2,
+      "persisted_at": "2026-09-12T06:45:53.849Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789195553846_S2",
+      "event_id": "test_farmer_ledger_1789195553846_S2",
+      "user_id": "test_farmer_ledger_1789195553846",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 800,
+      "sequence": 3,
+      "persisted_at": "2026-09-12T06:45:53.850Z"
+    },
+    {
+      "_id": "EVT_DUP_farmer_dup_sec_1789195554068",
+      "event_id": "EVT_DUP_farmer_dup_sec_1789195554068",
+      "user_id": "farmer_dup_sec_1789195554068",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 5000,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:45:54.070Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789195767283_C1",
+      "event_id": "test_farmer_ledger_1789195767283_C1",
+      "user_id": "test_farmer_ledger_1789195767283",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 4500,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:49:27.283Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789195767283_S1",
+      "event_id": "test_farmer_ledger_1789195767283_S1",
+      "user_id": "test_farmer_ledger_1789195767283",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 1200,
+      "sequence": 2,
+      "persisted_at": "2026-09-12T06:49:27.285Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789195767283_S2",
+      "event_id": "test_farmer_ledger_1789195767283_S2",
+      "user_id": "test_farmer_ledger_1789195767283",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 800,
+      "sequence": 3,
+      "persisted_at": "2026-09-12T06:49:27.286Z"
+    },
+    {
+      "_id": "EVT_DUP_farmer_dup_sec_1789195767495",
+      "event_id": "EVT_DUP_farmer_dup_sec_1789195767495",
+      "user_id": "farmer_dup_sec_1789195767495",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 5000,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:49:27.497Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789196392763_C1",
+      "event_id": "test_farmer_ledger_1789196392763_C1",
+      "user_id": "test_farmer_ledger_1789196392763",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 4500,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:59:52.763Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789196392763_S1",
+      "event_id": "test_farmer_ledger_1789196392763_S1",
+      "user_id": "test_farmer_ledger_1789196392763",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 1200,
+      "sequence": 2,
+      "persisted_at": "2026-09-12T06:59:52.765Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789196392763_S2",
+      "event_id": "test_farmer_ledger_1789196392763_S2",
+      "user_id": "test_farmer_ledger_1789196392763",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 800,
+      "sequence": 3,
+      "persisted_at": "2026-09-12T06:59:52.766Z"
+    },
+    {
+      "_id": "EVT_DUP_farmer_dup_sec_1789196392978",
+      "event_id": "EVT_DUP_farmer_dup_sec_1789196392978",
+      "user_id": "farmer_dup_sec_1789196392978",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 5000,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T06:59:52.979Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789196574078_C1",
+      "event_id": "test_farmer_ledger_1789196574078_C1",
+      "user_id": "test_farmer_ledger_1789196574078",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 4500,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T07:02:54.078Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789196574078_S1",
+      "event_id": "test_farmer_ledger_1789196574078_S1",
+      "user_id": "test_farmer_ledger_1789196574078",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 1200,
+      "sequence": 2,
+      "persisted_at": "2026-09-12T07:02:54.080Z"
+    },
+    {
+      "_id": "test_farmer_ledger_1789196574078_S2",
+      "event_id": "test_farmer_ledger_1789196574078_S2",
+      "user_id": "test_farmer_ledger_1789196574078",
+      "event_type": "OFFLINE_SPEND",
+      "amount_inr": 800,
+      "sequence": 3,
+      "persisted_at": "2026-09-12T07:02:54.081Z"
+    },
+    {
+      "_id": "EVT_DUP_farmer_dup_sec_1789196574288",
+      "event_id": "EVT_DUP_farmer_dup_sec_1789196574288",
+      "user_id": "farmer_dup_sec_1789196574288",
+      "event_type": "PAYOUT_CREDIT",
+      "amount_inr": 5000,
+      "sequence": 1,
+      "persisted_at": "2026-09-12T07:02:54.289Z"
+    },
+    {
+      "_id": "EVT_1789204399415_7tkgr",
+      "event_id": "EVT_1789204399415_7tkgr",
+      "user_id": "farmer_user",
+      "event_type": "POLICY_BIND",
+      "type_code": 1,
+      "event_id_hash": 0,
+      "target_hash": 0,
+      "amount_inr": 0,
+      "sequence": 1,
+      "timestamp_sec": 1789204363,
+      "persisted_at": "2026-09-12T09:13:19.415Z"
+    }
+  ],
+  "oracle_logs": [],
+  "sync_logs": [
+    {
+      "_id": "farmer_user",
+      "farmer_id": "farmer_user",
+      "device_id": "DEV_HANDSET_01",
+      "client_sequence": 1,
+      "payload_size_bytes": 62,
+      "reconcile_result": {
+        "accepted_count": 1,
+        "deduplicated_count": 0,
+        "rejected_count": 0,
+        "current_server_sequence": 2,
+        "confirmed_balance": 0,
+        "reconciled_events": [
+          {
+            "event_type": "POLICY_BIND",
+            "sequence": 1,
+            "status": "APPLIED"
+          }
+        ]
+      },
+      "recorded_at": "2026-09-12T09:13:19.418Z"
+    }
+  ]
+}
